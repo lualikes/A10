@@ -4,40 +4,29 @@
 <head>
     <title>Cookies Example</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        h1 {
-            color: green
-        }
-    </style>
 </head>
 
 <body>
     <h1>Cookies Example!</h1>
 
-    <!-- Name for Cookie -->
+
     <input type="text" id="key" placeholder="Name">
 
-    <!-- Value for the cookie -->
     <input type="text" id="val" placeholder="Value">
     <br>
 
-    <!-- button to set cookie -->
     <button onclick="setCookie()">Set a cookie</button>
     <br>
 
-    <!-- Button to get cookie -->
     <button onclick="getCookie()">Get cookies</button>
 
-    <!-- Empty Paragraph element to display Cookies -->
-    <p id="cookies">Displaying cookies: </p>
+    <p id="cookies"> Cookies will show here: </p>
     <script>
-        // Set cookies
         function setCookie() {
             document.cookie =
                 document.getElementById('key').value + "="
                 + document.getElementById('val').value;
         }
-        // Get cookies
         function getCookie() {
             document.getElementById("cookies").innerHTML =
                 document.cookie;
